@@ -3,6 +3,17 @@ import { Card, Button } from './ContactList.styled';
 import PropTypes from 'prop-types';
 
 export class ContactList extends Component {
+  static propTypes = {
+    contacts: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+          .isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+      })
+    ),
+    onDeleteProduct: PropTypes.func,
+  };
   render() {
     return (
       <>
@@ -20,13 +31,3 @@ export class ContactList extends Component {
     );
   }
 }
-ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ),
-  onDeleteProduct: PropTypes.func,
-};

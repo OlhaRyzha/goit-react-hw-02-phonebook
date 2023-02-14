@@ -2,6 +2,10 @@ import { Input } from './Filter.styled';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 export class Filter extends Component {
+  static propTypes = {
+    value: PropTypes.string,
+    onChangeFilter: PropTypes.func,
+  };
   render() {
     return (
       <>
@@ -15,7 +19,3 @@ export class Filter extends Component {
     );
   }
 }
-Filter.propTypes = {
-  value: PropTypes.string,
-  onChangeFilter: PropTypes.func,
-};

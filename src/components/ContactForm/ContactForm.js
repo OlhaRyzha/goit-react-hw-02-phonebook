@@ -3,6 +3,9 @@ import { Input, Button, Form } from './ContactForm.styled';
 import PropTypes from 'prop-types';
 
 export class ContactForm extends Component {
+  static propTypes = {
+    onAddProduct: PropTypes.func.isRequired,
+  };
   state = {
     name: '',
     number: '',
@@ -61,6 +64,3 @@ export class ContactForm extends Component {
     );
   }
 }
-ContactForm.propTypes = {
-  onAddProduct: PropTypes.func,
-};

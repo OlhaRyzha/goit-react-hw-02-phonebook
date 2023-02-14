@@ -41,19 +41,6 @@ export class App extends Component {
     this.setState({
       filter: value,
     });
-    // const filteredProducts = this.state.contacts.filter(contact =>
-    //   contact.name
-    //     .toLowerCase()
-    //     .trim()
-    //     .includes(this.state.filter.toLowerCase())
-    // );
-    // if (filteredProducts.length > 0) {
-    //   this.setState({
-    //     contacts: [...filteredProducts],
-    //   });
-    // } else {
-    //   Notify.failure('We have no contacts');
-    // }
   };
 
   getFilteredContacts = () => {
